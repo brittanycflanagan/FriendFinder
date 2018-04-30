@@ -24,7 +24,7 @@ module.exports = function(app) {
 
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
+  // In each of the below cases, when a user submits form datnoa (a JSON object)
   // ...the JSON is pushed to the appropriate JavaScript array
   // (ex. User fills out a reservation request... this data is then sent to the server...
   // Then the server saves the data to the tableData array)
@@ -36,7 +36,7 @@ module.exports = function(app) {
     // req.body is available since we're using the body-parser middleware
   
         friendsData.push(req.body);
-      res.json(true);
+        res.json(true);
 
       //This route will also be used to handle the compatibility logic.
     
