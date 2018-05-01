@@ -34,9 +34,56 @@ module.exports = function(app) {
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body-parser middleware
-  
-        friendsData.push(req.body);
-        res.json(true);
+  //console.log("current user Data:"+req.body);
+    
+    
+
+    //For every item in the fiendsarray, add the difference. Push the result to a "score" results to a temporary array. inthe array return the corresponding object. 
+//     var arr = [14, 58, 20, 77, 66, 82, 42, 67, 42, 4]
+// var min = Math.min.apply(Math, arr)
+// console.log(min)
+    //  if for every item in the arry, if array === min then return data friendsData[i]
+
+    friendsData.push(req.body); //adds newest data to friends object
+
+    var currentUserScores = req.body.scores;
+      console.log(currentUserScores);
+       //get the last user in the array & set to current user
+      var finalScores =[];
+      for (var i=0;i<friendsData.length;i++) { //make sure doesn't compare to last/current user
+        var scores = []; 
+        for (var j=0;j<friendsData[i].scores.length;j++) {
+          console.log("User 1 Score:"+currentUserScores[j]);
+          console.log("User 2 Score:"+friendsData[i].scores[j]);
+          var difference = Math.abs(currentUserScores[j] - friendsData[i].scores[j]);
+          console.log(difference);
+          scores.push(difference);
+         }
+         console.log(scores);
+         
+         var totalScore = 0;
+         for (var k=0;k<scores.length;k++) {
+           totalScore = totalScore+scores[k];
+         }
+         console.log("total score:"+ totalScore)
+         finalScores.push(totalScore);
+         //sum scores, add total difference to another array
+
+        }
+
+        //find the lowest number in the finalScores array
+        var min = Math.min.apply(Math, finalScores)
+        console.log(min)
+        for (i=0;i<finalScores.length;i++) {
+          if (finalScores[i] === min)
+          console.log(friendsData[i]);
+          res.json(friendsData[i]);
+        }
+
+
+        
+        // res.json(friendsData[0]); //returns the results
+        
 
       //This route will also be used to handle the compatibility logic.
     

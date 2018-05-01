@@ -1,7 +1,7 @@
 var friendsArray = [ //change to friendsData?
     {
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"http://placehold.it/200x200",
         "scores":[
             5,
             1,
@@ -12,6 +12,54 @@ var friendsArray = [ //change to friendsData?
             2,
             5,
             4,
+            1
+          ]
+      },
+      {
+        "name":"Brittany",
+        "photo":"http://placehold.it/200x200",
+        "scores":[
+            2,
+            1,
+            5,
+            5,
+            2,
+            1,
+            3,
+            4,
+            4,
+            4
+          ]
+      },
+      {
+        "name":"Jennifer",
+        "photo":"http://placehold.it/200x200",
+        "scores":[
+            2,
+            2,
+            2,
+            4,
+            5,
+            5,
+            5,
+            4,
+            4,
+            1
+          ]
+      },
+      {
+        "name":"Suzy",
+        "photo":"http://placehold.it/200x200",
+        "scores":[
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            1,
+            2,
+            3,
             1
           ]
       }
