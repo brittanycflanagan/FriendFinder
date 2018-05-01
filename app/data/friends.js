@@ -1,7 +1,9 @@
-var friendsArray = [ //change to friendsData?
+//Included some starter data for the application
+
+var friendsArray = [
     {
-        "name":"Ahmed",
-        "photo":"http://placehold.it/200x200",
+        "name":"John",
+        "photo":"https://i.pinimg.com/236x/8d/23/5f/8d235f1603100bc5ab4e78de36e1b110--mens-headshots-young-man.jpg",
         "scores":[
             5,
             1,
@@ -16,8 +18,8 @@ var friendsArray = [ //change to friendsData?
           ]
       },
       {
-        "name":"Brittany",
-        "photo":"http://placehold.it/200x200",
+        "name":"Lucy",
+        "photo":"http://www.indigomomentsphotography.com/wp-content/uploads/2014/05/headshot-suffocating-opportunities.jpg",
         "scores":[
             2,
             1,
@@ -33,7 +35,7 @@ var friendsArray = [ //change to friendsData?
       },
       {
         "name":"Jennifer",
-        "photo":"http://placehold.it/200x200",
+        "photo":"https://thumb1.shutterstock.com/mosaic_250/81977/734390824/stock-photo-beautiful-woman-headshot-over-white-background-734390824.jpg",
         "scores":[
             2,
             2,
@@ -48,8 +50,8 @@ var friendsArray = [ //change to friendsData?
           ]
       },
       {
-        "name":"Suzy",
-        "photo":"http://placehold.it/200x200",
+        "name":"Logan",
+        "photo":"https://blog.goldenspiralmarketing.com/hubfs/GS%20-%20Web%20Square%20Headshots_Bennett.jpg?t=1524075224674",
         "scores":[
             2,
             2,
@@ -66,5 +68,5 @@ var friendsArray = [ //change to friendsData?
       
   ];
   
-  // Note how we export the array. This makes it accessible to other files using require.
+ 
   module.exports = friendsArray;
